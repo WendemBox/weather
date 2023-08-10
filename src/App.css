@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 body {
   font-family: "Open Sans", serif;
@@ -10,20 +10,45 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: rgba(45,176,224,1);
-  background: -moz-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(45,176,224,1)), color-stop(100%, rgba(96,40,168,1)));
-  background: -webkit-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
-  background: -o-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
-  background: -ms-linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
-  background: linear-gradient(45deg, rgba(45,176,224,1) 0%, rgba(96,40,168,1) 100%);
+  background: rgba(45, 176, 224, 1);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(45, 176, 224, 1) 0%,
+    rgba(96, 40, 168, 1) 100%
+  );
+  background: -webkit-gradient(
+    left bottom,
+    right top,
+    color-stop(0%, rgba(45, 176, 224, 1)),
+    color-stop(100%, rgba(96, 40, 168, 1))
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(45, 176, 224, 1) 0%,
+    rgba(96, 40, 168, 1) 100%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(45, 176, 224, 1) 0%,
+    rgba(96, 40, 168, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(45, 176, 224, 1) 0%,
+    rgba(96, 40, 168, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(45, 176, 224, 1) 0%,
+    rgba(96, 40, 168, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db0e0', endColorstr='#6028a8', GradientType=1 );
 }
 
 .main {
   height: 55vh;
   background: #2a6bb1;
-  box-shadow: 0px 2px 80px -20px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 80px -20px rgba(0, 0, 0, 0.5);
   width: 60%;
   margin: 0 auto;
 }
@@ -83,7 +108,7 @@ button {
   cursor: pointer;
   background-color: #235d9c;
   color: #fff;
-  outline: none!important;
+  outline: none !important;
 }
 
 button:hover {
@@ -118,4 +143,35 @@ button:active {
 .error {
   color: #041f3c;
   font-weight: bold;
+}
+
+/* Общие стили для экранов шире 414px */
+/* ... (ваш код для экранов больше 414px) ... */
+
+/* Стили для экранов меньше 414px (например, айфон 11) */
+@media only screen and (max-width: 414px) {
+  .wrapper {
+    padding: 20px; /* Добавим немного отступов для лучшего отображения */
+  }
+
+  .main {
+    width: 90%; /* Уменьшим ширину основного блока */
+  }
+
+  .info {
+    height: auto; /* Для лучшей адаптации высоты */
+    padding: 20px; /* Добавим немного отступов */
+    text-align: center;
+  }
+
+  .form {
+    padding: 20px; /* Добавим немного отступов */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Растянем поле ввода на всю ширину */
+    margin-bottom: 15px; /* Уменьшим отступ снизу */
+  }
+
+  /* ... (продолжайте адаптировать остальные стили по необходимости) ... */
 }
