@@ -1,21 +1,23 @@
 import React from "react";
 
+class Weather extends React.Component {
+  render() {
+    // Конвертируем температуру из Кельвинов в Цельсия
+    const tempCelsius = this.props.temp - 273.15;
 
-class Weather extends React.Component{
-    render(){
-        return(
-            <div>
-                {this.props.city &&
-                <div >
-                <p>Местоположение: {this.props.city}, {this.props.country}</p>
-                <p>Температура: {this.props.temp}</p>
-                <p>Заход солнца: {this.props.sunset}</p>
-                </div>
-                }
-                <p>{this.props.error}</p>
-            </div>
-        )
-    }
+    return (
+      <div>
+        {this.props.city && this.props.country && (
+          <p>
+            Местоположение: {this.props.city}, {this.props.country}
+          </p>
+        )}
+        {this.props.temp && <p>Температура: {tempCelsius.toFixed(1)}°C</p>}
+        {this.props.sunset && <p>Закат солнца: {this.props.sunset}</p>}
+        {this.props.error && <p>{this.props.error}</p>}
+      </div>
+    );
+  }
 }
 
 export default Weather;
